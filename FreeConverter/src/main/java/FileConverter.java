@@ -103,40 +103,41 @@ public class FileConverter implements Initializable{
         try {
             Files.createDirectories(p1);
 
-//            File val = new File(this.outputFilePath);
-//            if (conversionType.getValue().toString() == "PDF to JPG") {
-//                for (String filename1 : inputFiles) {
-//                    PDDocument document = PDDocument.load(new File(filename1));
-//                    PDFRenderer pdfRenderer = new PDFRenderer(document);
-//                    FileNameExtractor x = new FileNameExtractor();
-//
-//                    String fileName = x.getName(filename1, ".pdf");
-//                    String fileExtension = "jpg";
-//                    for (int page = 0; page < document.getNumberOfPages(); ++page) {
-//                        File outPutFile = new File(this.outputFilePath + "\\" + fileName + "_" + (page + 1) + "." + fileExtension);
-//                        BufferedImage bim = pdfRenderer.renderImageWithDPI(page, 300, ImageType.RGB);
-//                        ImageIO.write(bim, fileExtension, outPutFile);
-//                    }
-//                    document.close();
-//                }
-//            } else
-            if (conversionType.getValue().toString() == "JPG to PDF") {
+            File val = new File(this.outputFilePath);
+            if (conversionType.getValue().toString() == "PDF to JPG") {
                 for (String filename1 : inputFiles) {
+                    PDDocument document = PDDocument.load(new File(filename1));
+                    PDFRenderer pdfRenderer = new PDFRenderer(document);
                     FileNameExtractor x = new FileNameExtractor();
-                    String fileName = x.getName(filename1, ".jpg");
 
-                    PDDocument document = new PDDocument();
-                    document.addPage(new PDPage());
-                    document.save(this.outputFilePath + "\\" + fileName + ".pdf");
+                    String fileName = x.getName(filename1, ".pdf");
+                    String fileExtension = "jpg";
+                    for (int page = 0; page < document.getNumberOfPages(); ++page) {
+                        File outPutFile = new File(this.outputFilePath + "\\" + fileName + "_" + (page + 1) + "." + fileExtension);
+                        BufferedImage bim = pdfRenderer.renderImageWithDPI(page, 300, ImageType.RGB);
+                        ImageIO.write(bim, fileExtension, outPutFile);
+                    }
                     document.close();
-
-                    String inputFile = this.outputFilePath + "\\" + fileName + ".pdf";
-                    AddImageToPDF app = new AddImageToPDF();
-                    app.createPDFFromImage(inputFile, filename1, inputFile);
-
-
                 }
             }
+//            } else
+//            if (conversionType.getValue().toString() == "JPG to PDF") {
+//                for (String filename1 : inputFiles) {
+//                    FileNameExtractor x = new FileNameExtractor();
+//                    String fileName = x.getName(filename1, ".jpg");
+//
+//                    PDDocument document = new PDDocument();
+//                    document.addPage(new PDPage());
+//                    document.save(this.outputFilePath + "\\" + fileName + ".pdf");
+//                    document.close();
+//
+//                    String inputFile = this.outputFilePath + "\\" + fileName + ".pdf";
+//                    AddImageToPDF app = new AddImageToPDF();
+//                    app.createPDFFromImage(inputFile, filename1, inputFile);
+//
+//
+//                }
+//            }
             alert.close();
 
             Alert success = new Alert(Alert.AlertType.INFORMATION);
