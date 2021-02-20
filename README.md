@@ -21,7 +21,7 @@ Download FreeConverterUtility.jar and double click on the utility to start using
 4) Compress: Click on compress button to compress pictures
 
 # How to use File Converter
-1) Select conversion type: jpg to pdf or pdf to jpg
+1) Select conversion type: pdf to jpg
 2) Select input path: Select files that you want to convert
 3) Select output path: Select the path where you want the output files be created
 4) Convert files: Click on convert files button
