@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="rootPane" prefHeight="441.0" prefWidth="645.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ImageResizerController">
+   <children>
+      <Text layoutX="40.0" layoutY="89.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1)   Select files for conversion" wrappingWidth="201.13671875">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Text>
+      <Text layoutX="41.0" layoutY="129.0" strokeType="OUTSIDE" strokeWidth="0.0" text="2)   Select height and width" wrappingWidth="187.13671875">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Text>
+      <Text layoutX="41.0" layoutY="172.0" strokeType="OUTSIDE" strokeWidth="0.0" text="3)   Select rotation degree" wrappingWidth="187.13671875">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Text>
+      <Text layoutX="40.0" layoutY="216.0" strokeType="OUTSIDE" strokeWidth="0.0" text="4)   Select output file quality" wrappingWidth="187.13671875">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Text>
+      <Text layoutX="41.0" layoutY="261.0" strokeType="OUTSIDE" strokeWidth="0.0" text="5)   Select output file format" wrappingWidth="187.13671875">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Text>
+      <Text layoutX="40.0" layoutY="306.0" strokeType="OUTSIDE" strokeWidth="0.0" text="6)   Select output file directory" wrappingWidth="210.13671875">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Text>
+      <Text layoutX="40.0" layoutY="345.0" strokeType="OUTSIDE" strokeWidth="0.0" text="7)   Resize pictures" wrappingWidth="187.13671875">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Text>
+      <Text layoutX="305.0" layoutY="89.0" strokeType="OUTSIDE" strokeWidth="0.0" text=":" wrappingWidth="10.13671875">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <Text layoutX="305.0" layoutY="129.0" strokeType="OUTSIDE" strokeWidth="0.0" text=":" wrappingWidth="10.13671875">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <Text layoutX="305.0" layoutY="172.0" strokeType="OUTSIDE" strokeWidth="0.0" text=":" wrappingWidth="10.13671875">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <Text layoutX="305.0" layoutY="216.0" strokeType="OUTSIDE" strokeWidth="0.0" text=":" wrappingWidth="10.13671875">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <Text layoutX="305.0" layoutY="261.0" strokeType="OUTSIDE" strokeWidth="0.0" text=":" wrappingWidth="10.13671875">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <Text layoutX="305.0" layoutY="304.0" strokeType="OUTSIDE" strokeWidth="0.0" text=":" wrappingWidth="10.13671875">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <Text layoutX="305.0" layoutY="345.0" strokeType="OUTSIDE" strokeWidth="0.0" text=":" wrappingWidth="10.13671875">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <Button fx:id="selectFile" layoutX="407.0" layoutY="72.0" mnemonicParsing="false" onMouseClicked="#setSelectFile" prefHeight="25.0" prefWidth="149.0" style="-fx-background-color: #00FF7F;" text="Select Files">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Button>
+      <TextField fx:id="height" layoutX="407.0" layoutY="112.0" prefHeight="25.0" prefWidth="63.0" promptText="Height" />
+      <TextField fx:id="width" layoutX="493.0" layoutY="112.0" prefHeight="25.0" prefWidth="63.0" promptText="Width" />
+      <ComboBox fx:id="rotateList" layoutX="433.0" layoutY="155.0" prefHeight="25.0" prefWidth="89.0" />
+      <ComboBox fx:id="qualityList" layoutX="434.0" layoutY="199.0" prefHeight="25.0" prefWidth="89.0" />
+      <ComboBox fx:id="formatList" layoutX="434.0" layoutY="244.0" prefHeight="25.0" prefWidth="89.0" />
+      <Button fx:id="outputDirectory" layoutX="407.0" layoutY="281.0" mnemonicParsing="false" onMouseClicked="#setOutputDirectory" prefHeight="25.0" prefWidth="149.0" style="-fx-background-color: #00FF7F;" text="Output Directory">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="createPictures" layoutX="407.0" layoutY="325.0" mnemonicParsing="false" onMouseClicked="#generatePictures" prefHeight="25.0" prefWidth="149.0" style="-fx-background-color: #00FF7F;" text="Create Pictures">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Button>
+      <Text layoutX="236.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Image Resizer" wrappingWidth="187.13671875">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Text>
+      <ImageView fitHeight="40.0" fitWidth="31.0" layoutX="41.0" layoutY="14.0" onMouseClicked="#backButton" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@back.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

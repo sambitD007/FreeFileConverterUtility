@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane fx:id="bp" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="715.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="HomeScreenController">
+   <top>
+      <AnchorPane prefHeight="111.0" prefWidth="715.0" style="-fx-background-color: #ff751a;" BorderPane.alignment="CENTER">
+         <children>
+            <Text fill="#111111" layoutX="203.0" layoutY="64.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Free File Converter Utility" wrappingWidth="309.13671875">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+   </top>
+   <center>
+      <AnchorPane prefHeight="418.0" prefWidth="715.0" style="-fx-background-color: white;" BorderPane.alignment="CENTER">
+         <children>
+            <Button layoutX="467.0" layoutY="151.0" mnemonicParsing="false" onMouseClicked="#loadFileConverter" prefHeight="40.0" prefWidth="158.0" style="-fx-background-color: black;" text="File Converter" textFill="#eee8e8">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+            <Text layoutX="290.0" layoutY="337.0" strokeType="OUTSIDE" strokeWidth="0.0" text="© Sambit Dash" wrappingWidth="157.13671875">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Text>
+            <Text layoutX="260.0" layoutY="356.0" strokeType="OUTSIDE" strokeWidth="0.0" text="sambitdash.2020@gmail.com" wrappingWidth="216.13671875">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Text>
+            <Button layoutX="59.0" layoutY="151.0" mnemonicParsing="false" onMouseClicked="#loadImageResizer" prefHeight="40.0" prefWidth="157.0" style="-fx-background-color: black;" text="Image Resizer" textFill="#f8e4e4">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+            <Button layoutX="266.0" layoutY="151.0" mnemonicParsing="false" onMouseClicked="#loadImageCompressor" prefHeight="40.0" prefWidth="157.0" style="-fx-background-color: black;" text="Image Compression" textFill="#f8e4e4">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+            <Button layoutX="161.0" layoutY="231.0" mnemonicParsing="false" onMouseClicked="#loadLicence" prefHeight="40.0" prefWidth="157.0" style="-fx-background-color: black;" text="Licence Information" textFill="#f8e4e4">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+            <Button layoutX="369.0" layoutY="231.0" mnemonicParsing="false" onMouseClicked="#loadDonate" prefHeight="40.0" prefWidth="157.0" style="-fx-background-color: black;" text="Donate" textFill="#f8e4e4">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+   </center>
+   <bottom>
+      <AnchorPane prefHeight="33.0" prefWidth="715.0" style="-fx-background-color: #ff751a;" BorderPane.alignment="CENTER" />
+   </bottom>
+</BorderPane>

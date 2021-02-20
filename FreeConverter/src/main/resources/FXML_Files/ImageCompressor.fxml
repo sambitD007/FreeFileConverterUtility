@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ImageCompressorController">
+   <children>
+      <ImageView fitHeight="40.0" fitWidth="31.0" layoutX="46.0" layoutY="24.0" onMouseClicked="#backButton" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@back.png" />
+         </image>
+      </ImageView>
+      <Text layoutX="202.0" layoutY="49.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Image Compressor" wrappingWidth="228.13671875">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Text>
+      <Text layoutX="46.0" layoutY="120.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1) Select Images" wrappingWidth="144.13671875">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Text>
+      <Text layoutX="46.0" layoutY="172.0" strokeType="OUTSIDE" strokeWidth="0.0" text="2) Compression Percentage" wrappingWidth="195.13671875">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Text>
+      <Text layoutX="46.0" layoutY="216.0" strokeType="OUTSIDE" strokeWidth="0.0" text="3) Select Output Path" wrappingWidth="144.13671875">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Text>
+      <Text layoutX="46.0" layoutY="260.0" strokeType="OUTSIDE" strokeWidth="0.0" text="4) Compress Files" wrappingWidth="144.13671875">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Text>
+      <Button layoutX="390.0" layoutY="100.0" mnemonicParsing="false" onMouseClicked="#setSelectFile" prefHeight="31.0" prefWidth="124.0" style="-fx-background-color: #00FF7F;" text="Select Image">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Button>
+      <Button layoutX="390.0" layoutY="196.0" mnemonicParsing="false" onMouseClicked="#setOutputDirectory" prefHeight="31.0" prefWidth="124.0" style="-fx-background-color: #00FF7F;" text="Ouput Path">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Button>
+      <Button layoutX="390.0" layoutY="240.0" mnemonicParsing="false" onMouseClicked="#compressFiles" prefHeight="31.0" prefWidth="124.0" style="-fx-background-color: #00FF7F;" text="Compress">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Button>
+      <TextField fx:id="compress" layoutX="391.0" layoutY="155.0" prefHeight="25.0" prefWidth="124.0" promptText="Compress %" />
+   </children>
+</AnchorPane>
