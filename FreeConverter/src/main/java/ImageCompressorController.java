@@ -11,6 +11,8 @@ import net.coobird.thumbnailator.Thumbnails;
 import net.coobird.thumbnailator.name.Rename;
 
 import javax.swing.*;
+import javax.swing.filechooser.FileFilter;
+import javax.swing.filechooser.FileNameExtensionFilter;
 import java.io.File;
 import java.net.URL;
 import java.nio.file.Files;
@@ -39,6 +41,21 @@ public class ImageCompressorController implements Initializable{
 
     public void setSelectFile(MouseEvent mouseEvent){
         JFileChooser chooser = new JFileChooser();
+        chooser.setFileFilter(new FileFilter() {
+
+            public String getDescription() {
+                return "JPG Images (*.jpg)";
+            }
+
+            public boolean accept(File f) {
+                if (f.isDirectory()) {
+                    return true;
+                } else {
+                    String filename = f.getName().toLowerCase();
+                    return filename.endsWith(".jpg") || filename.endsWith(".jpeg") ;
+                }
+            }
+        });
         chooser.setMultiSelectionEnabled(true);
         chooser.showOpenDialog(null);
         File[] files = chooser.getSelectedFiles();
@@ -71,26 +88,25 @@ public class ImageCompressorController implements Initializable{
         Path p1 = Paths.get(this.outputFilePath);
 
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
-        alert.setHeaderText("Compressing Images");
+        alert.setTitle("Compressing Images");
         alert.show();
 
         try {
 
             Files.createDirectories(p1);
-            File val = new File(this.outputFilePath);
-            Thumbnails.of(this.inputFiles)
-                    .scale(1)
-                    .outputQuality(Double.parseDouble(compress.getText()) * 0.01)
-                    .toFiles(val, Rename.NO_CHANGE);
+            ImageCompressor val = new ImageCompressor();
+            val.executeCompression(this.inputFiles,this.outputFilePath,Double.parseDouble(compress.getText()) * 0.01);
 
             alert.close();
 
             Alert success = new Alert(Alert.AlertType.INFORMATION);
+            success.setTitle("Success");
             success.setHeaderText("Image compression successful");
             success.show();
         }catch (Exception e){
             alert.close();
             Alert failure = new Alert(Alert.AlertType.ERROR);
+            failure.setTitle("Failed");
             failure.setHeaderText("Some error occurred. Image resizing failed");
             failure.show();
 

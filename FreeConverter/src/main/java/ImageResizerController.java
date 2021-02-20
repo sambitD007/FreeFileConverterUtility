@@ -108,7 +108,7 @@ public class ImageResizerController implements Initializable {
 
 
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
-        alert.setHeaderText("Resizing images");
+        alert.setTitle("Resizing images");
         alert.show();
 
         try {
@@ -120,11 +120,13 @@ public class ImageResizerController implements Initializable {
             alert.close();
 
             Alert success = new Alert(Alert.AlertType.INFORMATION);
+            success.setTitle("Success");
             success.setHeaderText("Image resizing successful");
             success.show();
         }catch (Exception e){
             alert.close();
             Alert failure = new Alert(Alert.AlertType.ERROR);
+            failure.setTitle("Failed");
             failure.setHeaderText("Some error occurred. Image resizing failed");
             failure.show();
 
