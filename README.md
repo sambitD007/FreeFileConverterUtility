@@ -1,4 +1,4 @@
-# FreeFileConverterUtility
+# Free File Converter Utility
 Free File Converter Utility is a desktop application created in JavaFX to simplify image resizing and file conversion.
 
 # How to run utility?
