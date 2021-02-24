@@ -1,5 +1,6 @@
 # Free File Converter Utility
 Free File Converter Utility is a desktop application created in JavaFX to simplify image resizing and file conversion.
+Check out this Linkedin Video for Tool walkthough: https://www.linkedin.com/posts/sambit-dash-345a3792_java-javafx-freefileconverter-activity-6768918153939472384-ZJyy
 
 # How to run utility?
 Download Java Runtime 11 or greater as it is required to run the software. If you are already using Java 11 or greater then there is no need to install anything.
